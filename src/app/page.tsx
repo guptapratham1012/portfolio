@@ -4,7 +4,7 @@ export const dynamic = "force-static";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen text-white">
       <div className="mx-auto max-w-5xl px-6 py-16">
         <header className="space-y-4">
           <p className="text-sm text-white/70">Product • Web • Automation</p>

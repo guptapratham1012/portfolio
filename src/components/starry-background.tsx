@@ -24,12 +24,12 @@ export function StarryBackground() {
 
   useEffect(() => {
     // Generate static twinkling stars
-    const generatedStars: Star[] = Array.from({ length: 150 }, (_, i) => ({
+    const generatedStars: Star[] = Array.from({ length: 200 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
-      size: Math.random() * 2 + 1,
-      opacity: Math.random() * 0.7 + 0.3,
+      size: Math.random() * 3 + 1,
+      opacity: Math.random() * 0.5 + 0.5,
       twinkleDelay: Math.random() * 5,
     }));
     setStars(generatedStars);
@@ -58,6 +58,7 @@ export function StarryBackground() {
             height: `${star.size}px`,
             opacity: star.opacity,
             animationDelay: `${star.twinkleDelay}s`,
+            boxShadow: `0 0 ${star.size * 2}px ${star.size / 2}px rgba(255, 255, 255, 0.8)`,
           }}
         />
       ))}
